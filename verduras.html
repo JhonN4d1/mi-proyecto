@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="short icon" href="https://i.ibb.co/kgp2JY7/images.jpg" alt="images">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>VERDURAS</title>
+    <style>
+        :root{
+            --green: #00ff00;
+            --red: #d5040a;
+            --skyblue: #00e1ff;
+        }
+        body{
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .page{
+            position: relative;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .container{
+            position: absolute;
+            z-index: 1;
+        }
+        .loader {
+            position: fixed; /* Cambiado de absolute a fixed */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Asegúrate de que tenga un valor de z-index más alto */
+            background-color: peru;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: loader 3s linear forwards;
+        }
+        @keyframes loader{
+            0%{
+                opacity: 1;
+                visibility: visible;
+            }
+            95%{
+                opacity: 1;
+                visibility: visible;
+            }
+            100%{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .loader div{
+            /**/
+            background-color: yellow;
+            width: 60px;
+            height: 60px;
+            margin: 15px;
+            border-radius: 00%;
+            /**/
+            transform: scale(0);
+            animation: scaling 2s ease-in-out infinite;
+        }
+        /**/
+        .loader div:nth-child(1){animation-delay: 0.2s;}
+        .loader div:nth-child(2){animation-delay: 0.4s;}
+        .loader div:nth-child(3){animation-delay: 0.6s;}
+        .loader div:nth-child(4){animation-delay: 0.8s;}
+
+        @keyframes scaling{
+            0%, 100%{transform: scale(0.2);}
+            40%{transform: scale(1);}
+            50%{transform: scale(1.5);}
+            70%{transform: scale(2);}
+        }
+        /**/
+        .container{
+            position: relative;
+        }
+        #formulariio{
+            position: relative;
+        }
+        #formulario iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .columna-50{
+            width: 50%;
+        }
+        .empujar-50{
+            margin-left: 50%;
+        }
+        #formulario form{
+            padding: 50px;
+            background-color: #00ff00;
+            max-width: 400px;
+            margin: auto;
+        }
+        #formulario form .form-block{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        #formulario form .form-block .form-control{
+            display: block;
+            height: 40px;
+            font-size: 12px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+            padding: 5px 5px;
+        }
+        #formulario form .form-block textarea{
+            display: block;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+            padding: 5px 10px;
+        }
+        .boton.boton-formulario{
+            background-color: white;
+            color: blue;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .bloque-ultimo input:hover{
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!---->
+        <section class="container">
+            <nav class="navbar">
+                <div class="navbar_content">
+                    <img src="https://i.ibb.co/bFqxWQn/logo-dark.webp" alt="logo-dark">
+                    <ul>
+                        <li><a href="entregable2.html">PAGINA PRINCIPAL</a></li>
+                    </ul>
+                    <h1>
+                        ESTAS VERDURAS ESTAN EN LA VENTA
+                    </h1>
+                </div>
+            </nav>
+
+            <section class="main-content">
+                <h1>
+                    Estas son las verduras organicas que estan en la venta
+                </h1>
+                <h2>
+                    ZANAHORIA
+                </h2>
+                <img src="https://i.ibb.co/K6gPmp1/Bunches-of-carrots.jpg" alt="Bunches-of-carrots">
+                <p>
+                    Es rica en fósforo, el cual vigoriza las mentes y cuerpos cansados. Es muy útil para eliminar los cólicos y favorece la digestión. Es un vegetal diurético que evita la retención de líquidos. No puede faltar en verano, ya que facilita el bronceado de manera saludable y totalmente natural.
+                </p>
+                <h2>
+                    CEBOLLA
+                </h2>
+                <img src="https://i.ibb.co/n0gB70b/250px-Two-colors-of-onions.jpg" alt="250px-Two-colors-of-onions">
+                <p>
+                    Es un gran aliado en el combate de afecciones respiratorias, como gripe, bronquitis, tos y resfríos. La cebolla contiene quercetina, un elemento antioxidante de la familia de los flavonoides al que se le han atribuido propiedades analgésicas, vasodilatadores y antiinlamatorias entre otras.
+                </p>
+                <h2>
+                    TOMATE
+                </h2>
+                <img src="https://i.ibb.co/8MW6Ctj/Bright-red-tomato-and-cross-section02.jpg" alt="tomato">
+                <p>
+                    Ayuda en casos de enfermedades hepáticas, quemaduras, obesidad, raquitismo, ayuda a combatir cáncer de mama, de esófago, de matriz, de colon, de estómago, de páncreas y próstata. También se utiliza para prevenir la diabetes, enfermedades cardiovasculares, cataratas y asma.
+                </p>
+            </section>
+
+            <section id="formulario" class="seccion">
+                <div class="row">
+                    <div class="row">
+                        <div class="columna columna-50 empujar-50">
+                            <form action="" method="post">
+                                <div class="form-block">
+                                    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                                </div>
+                                <div class="form-block">
+                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-block">
+                                    <textarea name="mensaje" placeholder="Consulta"></textarea>
+                                </div>
+                                <div class="form-block">
+                                    <input type="date" value="2017-06-01" />
+                                </div>
+                                <div class="form-block bloque-ultimo">
+                                    <input type="submit" class="boton boton-contactenos" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <div class="page">
+            </div>
+        </div>
+    </div>
+</body>
+</html>

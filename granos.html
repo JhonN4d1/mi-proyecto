@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="short icon" href="https://i.ibb.co/kgp2JY7/images.jpg" alt="images">
+    <link rel="stylesheet" href="./styles/main.css">
+    <title>GRANOS, SEMILLAS Y LENGUMBRES</title>
+    <style>
+        :root{
+            --green: #00ff00;
+            --red: #d5040a;
+            --skyblue: #00e1ff;
+        }
+        body{
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+            text-decoration: none;
+        }
+        .page{
+            position: relative;
+            height: 100vh;
+            overflow-y: auto;
+        }
+        .container{
+            position: absolute;
+            z-index: 1;
+        }
+        .loader {
+            position: fixed; /* Cambiado de absolute a fixed */
+            top: 0;
+            left: 0;
+            z-index: 1000; /* Asegúrate de que tenga un valor de z-index más alto */
+            background-color: orangered;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: loader 3s linear forwards;
+        }
+        @keyframes loader{
+            0%{
+                opacity: 1;
+                visibility: visible;
+            }
+            95%{
+                opacity: 1;
+                visibility: visible;
+            }
+            100%{
+                opacity: 0;
+                visibility: hidden;
+            }
+        }
+        .loader div{
+            /**/
+            background-color: blue;
+            width: 100px;
+            height: 10px;
+            margin: 10px;
+            border-radius: 0%;
+            /**/
+            transform: scale(0);
+            animation: scaling 2s ease-in-out infinite;
+        }
+        /**/
+        .loader div:nth-child(1){animation-delay: 0.2s;}
+        .loader div:nth-child(2){animation-delay: 0.4s;}
+        .loader div:nth-child(3){animation-delay: 0.6s;}
+        .loader div:nth-child(4){animation-delay: 0.8s;}
+
+        @keyframes scaling{
+            0%, 100%{transform: scale(0.2);}
+            40%{transform: scale(1);}
+            50%{transform: scale(1.5);}
+            70%{transform: scale(2);}
+        }
+        /**/
+        .container{
+            position: relative;
+        }
+        #formulariio{
+            position: relative;
+        }
+        #formulario iframe{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        .columna-50{
+            width: 50%;
+        }
+        .empujar-50{
+            margin-left: 50%;
+        }
+        #formulario form{
+            padding: 50px;
+            background-color: #00ff00;
+            max-width: 400px;
+            margin: auto;
+        }
+        #formulario form .form-block{
+            width: 100%;
+            margin-bottom: 15px;
+        }
+        #formulario form .form-block .form-control{
+            display: block;
+            height: 40px;
+            font-size: 12px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+            padding: 5px 5px;
+        }
+        #formulario form .form-block textarea{
+            display: block;
+            height: 40px;
+            font-size: 16px;
+            border: 1px solid black;
+            border-radius: 10px;
+            width: 100%;
+            padding: 5px 10px;
+        }
+        .boton.boton-formulario{
+            background-color: white;
+            color: blue;
+            font-size: 16px;
+            font-weight: bold;
+        }
+        .bloque-ultimo input:hover{
+            background-color: black;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <!---->
+        <section class="container">
+            <nav class="navbar">
+                <div class="navbar_content">
+                    <img src="https://i.ibb.co/bFqxWQn/logo-dark.webp" alt="logo-dark">
+                    <ul>
+                        <li><a href="entregable2.html">PAGINA PRINCIPAL</a></li>
+                    </ul>
+                    <h1>
+                        ESTAS GRANOS, SEMILLAS Y LENGUMBRES ESTAN EN LA VENTA
+                    </h1>
+                </div>
+            </nav>
+
+            <section class="main-content">
+                <h1>
+                    Estas son lOS granos, semillas y lengumbres que estan en la venta
+                </h1>
+                <h2>
+                    MAIZ
+                </h2>
+                <img src="https://i.ibb.co/kccXCRT/Zea-mays-Blanco2-279.png" alt="Zea">
+                <p>
+                    Bueno para el cerebro: Rico en ácido fólico y otras vitaminas, el maíz es un aliado de diversas funciones cerebrales. Cuida nuestra salud cardiovascular: La vitamina B1 que contiene el maíz disminuye la homocisteína y, por lo tanto, reduce también el riesgo de sufrir un ataque cardiovascular.
+                </p>
+                <h2>
+                    SOYA
+                </h2>
+                <img src="https://i.ibb.co/GvJbDmf/soya-46413-l.webp" alt="soya-46413-l">
+                <p>
+                    Las isoflavonas que se encuentran naturalmente en productos de la soya pueden desempeñar una función en la prevención de algunos cánceres relacionados con hormonas. Consumir una dieta que incluya una cantidad moderada de soya antes de alcanzar la adultez puede reducir el riesgo de cáncer de mama y de ovario en mujeres.
+                </p>
+                <h2>
+                    FRIJOL
+                </h2>
+                <img src="https://i.ibb.co/PM9NRhb/Painted-Pony-Bean.jpg" alt="Painted-Pony-Bean">
+                <p>
+                    Los frijoles y las legumbres contienen antioxidantes que ayudan a prevenir el daño celular y a combatir enfermedades y el envejecimiento. La fibra y otros nutrientes benefician el aparato digestivo y pueden incluso ayudar a prevenir los cánceres digestivos.
+                </p>
+            </section>
+
+            <section id="formulario" class="seccion">
+                <div class="row">
+                    <div class="row">
+                        <div class="columna columna-50 empujar-50">
+                            <form action="" method="post">
+                                <div class="form-block">
+                                    <input type="text" name="nombre" class="form-control" placeholder="Nombre">
+                                </div>
+                                <div class="form-block">
+                                    <input type="email" name="email" class="form-control" placeholder="Email">
+                                </div>
+                                <div class="form-block">
+                                    <textarea name="mensaje" placeholder="Consulta"></textarea>
+                                </div>
+                                <div class="form-block">
+                                    <input type="date" value="2017-06-01" />
+                                </div>
+                                <div class="form-block bloque-ultimo">
+                                    <input type="submit" class="boton boton-contactenos" value="Enviar">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="loader">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </section>
+        <div class="page">
+            </div>
+        </div>
+    </div>
+</body>
+</html>
